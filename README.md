@@ -15,8 +15,9 @@ Here I solve **one logic-based JavaScript problem every day** to improve my prog
 
 ## 📈 Progress
 
-- Day 01 ✅
-- Day 02 ✅
+- Day 01 ✅ // Find The Area Of Rectangle
+- Day 02 ✅ // Find the smallest Number
+- Day 03 ✅ // write a function that return the reverse string
 - _...updating daily..._
 
 ## 🚀 Goal
