@@ -15,10 +15,11 @@ Here I solve **one logic-based JavaScript problem every day** to improve my prog
 
 ## 📈 Progress
 
-- Day 01 ✅ // Find The Area Of Rectangle
-- Day 02 ✅ // Find the smallest Number
-- Day 03 ✅ // write a function that return the reverse string
-- Day 04 ✅ // write a function that return fictorial of a number
+- Day 01 ✅ // Find The Area Of Rectangle.
+- Day 02 ✅ // Find the smallest Number.
+- Day 03 ✅ // write a function that return the reverse string.
+- Day 04 ✅ // write a function that return fictorial of a number.
+- Day 05 ✅ // write a function that calculate the leap year.
 - _...updating daily..._
 
 ## 🚀 Goal
