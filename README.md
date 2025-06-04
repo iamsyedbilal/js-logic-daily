@@ -20,7 +20,8 @@ Here I solve **one logic-based JavaScript problem every day** to improve my prog
 - Day 03 ✅ // write a function that return the reverse string.
 - Day 04 ✅ // write a function that return fictorial of a number.
 - Day 05 ✅ // write a function that calculate the leap year.
-- Day 06 ✅ // // write a function that calculate the sum of digits.
+- Day 06 ✅ // write a function that calculate the sum of digits.
+- Day 07 ✅ // write a function that generate and print multiplication of table
 - _...updating daily..._
 
 ## 🚀 Goal
