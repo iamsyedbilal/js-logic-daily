@@ -23,6 +23,7 @@ Here I solve **one logic-based JavaScript problem every day** to improve my prog
 - Day 06 ✅ // write a function that calculate the sum of digits.
 - Day 07 ✅ // write a function that generate and print multiplication of table
 - Day 08 ✅ // Write a function and find the largest number of array
+- Day 09 ✅ // Write a function that check Palindrome.
 - _...updating daily..._
 
 ## 🚀 Goal
