@@ -24,6 +24,7 @@ Here I solve **one logic-based JavaScript problem every day** to improve my prog
 - Day 07 ✅ // write a function that generate and print multiplication of table
 - Day 08 ✅ // Write a function and find the largest number of array
 - Day 09 ✅ // Write a function that check Palindrome.
+- Day 10 ✅ // write a function that return the result of given number power.
 - _...updating daily..._
 
 ## 🚀 Goal
