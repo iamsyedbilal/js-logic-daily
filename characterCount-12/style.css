@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(120deg, #89f7fe, #66a6ff);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  transition: background 0.5s ease;
+}
+
+div {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+h1 {
+  margin-bottom: 25px;
+  color: #000;
+  font-size: 1.8rem;
+}
+
+textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  resize: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+textarea::placeholder {
+  color: #eee;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #00d4ff;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.displayRemainingChar {
+  margin-top: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.displayRemainingChar.safe {
+  color: #1ed760;
+}
+.displayRemainingChar.warning {
+  color: #f0ad4e;
+}
+.displayRemainingChar.danger {
+  color: #ff4d4d;
+}
+
+.refreshCount {
+  margin-top: 25px;
+  padding: 12px 24px;
+  font-size: 16px;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 242, 254, 0.4);
+  transition: transform 0.2s ease, background 0.4s ease;
+}
+
+.refreshCount:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+}
+
+@media (max-width: 480px) {
+  div {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  textarea {
+    font-size: 14px;
+  }
+
+  .refreshCount {
+    width: 100%;
+  }
+}
