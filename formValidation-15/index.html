@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Form Validation JS</title>
+  </head>
+  <body>
+    <div>
+      <h1>Register With Us</h1>
+      <form class="form">
+        <div class="form-control">
+          <label>User Name</label>
+          <input
+            type="text"
+            class="username"
+            placeholder="Enter User Name"
+            name="username"
+          />
+          <small>Error Message</small>
+        </div>
+
+        <div class="form-control">
+          <label>Email</label>
+          <input
+            type="text"
+            name="email"
+            class="email"
+            placeholder="Enter Your Email"
+          />
+          <small>Error Message</small>
+        </div>
+
+        <div class="form-control">
+          <label>Password</label>
+          <input
+            type="password"
+            name="password"
+            class="password"
+            placeholder="Enter Your Password"
+          />
+          <small>Error Message</small>
+        </div>
+
+        <div class="form-control">
+          <label>Confirm Password</label>
+          <input
+            type="password"
+            name="confirm password"
+            class="cPassword"
+            placeholder="Enter Your Password Again"
+          />
+          <small>Error Message</small>
+        </div>
+
+        <button>Submit</button>
+      </form>
+    </div>
+    <script src="./script.js" defer></script>
+  </body>
+</html>

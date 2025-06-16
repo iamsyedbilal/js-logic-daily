@@ -29,6 +29,7 @@ Here I solve **one logic-based JavaScript problem every day** to improve my prog
 - Day 12 ✅ // Create a remaining characters counter app.
 - Day 13 ✅ //write a function that calculate and return the average set of number
 - Day 14 ✅ // Write a function that calculate the simple interest.
+- Day 15 ✅ //JS Form Validation Project
 - _...updating daily..._
 
 ## 🚀 Goal
