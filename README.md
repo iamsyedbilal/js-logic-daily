@@ -31,6 +31,7 @@ Here I solve **one logic-based JavaScript problem every day** to improve my prog
 - Day 14 ✅ // Write a function that calculate the simple interest.
 - Day 15 ✅ // JS Form Validation Project
 - Day 16 ✅ // Write a function that tells the number is prime or not
+- Day 17 ✅ // Write a function that count words of a sentence
 - _...updating daily..._
 
 ## 🚀 Goal
