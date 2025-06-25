@@ -33,6 +33,7 @@ Here I solve **one logic-based JavaScript problem every day** to improve my prog
 - Day 16 ✅ // Write a function that tells the number is prime or not
 - Day 17 ✅ // Write a function that count words of a sentence
 - Day 18 ✅ // write a function that calculate celsius to fahrenheit
+- Day 19 ✅ // Write a function that swap two numbers
 - _...updating daily..._
 
 ## 🚀 Goal
