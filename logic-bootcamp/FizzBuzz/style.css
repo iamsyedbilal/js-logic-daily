@@ -1,0 +1,149 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page background */
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #1d2671, #c33764);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* Game container */
+.container {
+  background: #111827;
+  width: 100%;
+  max-width: 420px;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+/* Title */
+.container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.container p {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  margin-bottom: 1rem;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Input */
+.controls input {
+  flex: 1;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+/* Button */
+.controls button {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.controls button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(34, 197, 94, 0.6);
+}
+
+.controls button:active {
+  transform: scale(0.97);
+}
+
+/* Output list */
+#outputList {
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background: #020617;
+}
+
+/* List items */
+#outputList li {
+  padding: 0.4rem;
+  margin-bottom: 0.3rem;
+  border-radius: 6px;
+  background: #1e293b;
+  font-size: 0.95rem;
+}
+
+/* FizzBuzz styles */
+.fizz {
+  color: #f87171;
+  font-weight: bold;
+}
+
+.buzz {
+  color: #facc15;
+  font-weight: bold;
+}
+
+.fizzbuzz {
+  color: #4ade80;
+  font-weight: bold;
+  background: #052e16;
+}
+
+/* Scrollbar (optional but nice) */
+#outputList::-webkit-scrollbar {
+  width: 6px;
+}
+#outputList::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 10px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .container {
+    padding: 1.2rem;
+  }
+
+  .container h1 {
+    font-size: 1.5rem;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  .controls button {
+    width: 100%;
+  }
+}
+
+#message {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #f87171;
+}

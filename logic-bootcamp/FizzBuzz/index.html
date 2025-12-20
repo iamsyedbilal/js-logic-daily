@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="title" content="FizzBuzz" />
+    <meta name="description" content="FizzBuzz Logic Bootcamp Exercise" />
+    <link rel="stylesheet" href="style.css" />
+    <title>FizzBuzz</title>
+  </head>
+  <body>
+    <!-- Fizzbuzz UI -->
+    <div class="container">
+      <h1>FizzBuzz Game</h1>
+      <p>Enter a number to play FizzBuzz up to that number (e.g., 100).</p>
+      <div class="controls">
+        <input
+          type="number"
+          id="limitInput"
+          placeholder="Enter a number"
+          min="1"
+        />
+        <button id="btn">Play</button>
+      </div>
+      <ul id="outputList">
+        <!-- Results will be displayed here -->
+      </ul>
+      <p id="message"></p>
+    </div>
+    <script src="./script.js" defer></script>
+  </body>
+</html>
