@@ -38,10 +38,17 @@ The focus is on **thinking, breaking problems down, and writing logic manually**
   - Reverse logic
   - Input validation
 
-- Day 4 ⏳ FizzBuzz with UI
+- Day 4 ✅ FizzBuzz with UI
+
   - Loops
   - Conditional order
   - Dynamic DOM updates
+
+  - Day 5 ✅ Password Strength Checker
+  - Conditional order
+  - Dynamic DOM updates
+
+    - Day 6 ⏳ Random Qoutes Generator
 
 ---
 
