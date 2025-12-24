@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #121212;
+  transition: background-color 0.5s ease;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  padding: 2.5rem 3rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  width: 320px;
+}
+
+#heading {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+#hexCodeDisplay {
+  font-size: 1.8rem;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+#hexCodeDisplay:hover {
+  transform: scale(1.05);
+  background: rgba(0, 0, 0, 0.35);
+}
+
+#generateBtn {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #ffffff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#generateBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#generateBtn:active {
+  transform: scale(0.97);
+}
+#hexCodeDisplay.copied {
+  background: rgba(0, 128, 0, 0.4);
+}
+#hexCodeDisplay.copied:hover {
+  background: rgba(0, 128, 0, 0.6);
+}
+#hexCodeDisplay.copied:active {
+  background: rgba(0, 128, 0, 0.8);
+}
