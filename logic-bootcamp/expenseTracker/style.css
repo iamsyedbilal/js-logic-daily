@@ -1,0 +1,141 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* Page background */
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+/* Main wrapper */
+body > div {
+  background: #ffffff;
+  width: 90%;
+  max-width: 900px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #4a4a4a;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Form + List cards */
+.expense-form,
+.expense-list {
+  flex: 1;
+  min-width: 280px;
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+/* Section titles */
+h2 {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+/* Form controls */
+.form-control {
+  margin-bottom: 1rem;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.form-control input {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.form-control input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+/* Add button */
+button[type="submit"] {
+  width: 100%;
+  padding: 0.7rem;
+  background: #667eea;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #5a67d8;
+}
+
+/* Expense list */
+#expenses {
+  list-style: none;
+}
+
+#expenses li {
+  background: #fff;
+  margin-bottom: 0.7rem;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-size: 0.95rem;
+}
+
+/* Delete button */
+.delete-btn {
+  background: #e53e3e;
+  color: white;
+  border: none;
+  padding: 0.35rem 0.6rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: #c53030;
+}
+
+/* Empty state */
+#expenses li:only-child {
+  justify-content: center;
+  color: #888;
+  box-shadow: none;
+}
+#expenses li:only-child .delete-btn {
+  display: none;
+}
