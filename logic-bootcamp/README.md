@@ -86,6 +86,12 @@ The focus is on **thinking, breaking problems down, and writing logic manually**
 - DOM rendering from data
 - Completed vs pending logic
 
+#### Day 12 ✅ Notes Keeping App (with localStorage)
+
+- Persistent state (localStorage)
+- DOM rendering from data
+- Completed vs pending logic
+
 ---
 
 ## 🧠 How I Build Each Project
