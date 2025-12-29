@@ -1,0 +1,141 @@
+@layer global {
+  /* dm-sans-300 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 300;
+    src: url("/assets/fonts/dm-sans-v17-latin-300.woff2") format("woff2");
+  }
+  /* dm-sans-500 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 500;
+    src: url("/assets/fonts/dm-sans-v17-latin-500.woff2") format("woff2");
+  }
+  /* dm-sans-600 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 600;
+    src: url("/assets/fonts/dm-sans-v17-latin-600.woff2") format("woff2");
+  }
+  /* dm-sans-600italic - latin */
+  @font-face {
+    font-display: swap;
+    font-family: "DM Sans";
+    font-style: italic;
+    font-weight: 600;
+    src: url("/assets/fonts/dm-sans-v17-latin-600italic.woff2") format("woff2");
+  }
+  /* dm-sans-700 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/assets/fonts/dm-sans-v17-latin-700.woff2") format("woff2");
+  }
+
+  /* bricolage-grotesque-regular - latin */
+  @font-face {
+    font-display: swap;
+    font-family: "Bricolage Grotesque";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/assets/fonts/bricolage-grotesque-v9-latin-regular.woff2")
+      format("woff2");
+  }
+  /* bricolage-grotesque-700 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: "Bricolage Grotesque";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/assets/fonts/bricolage-grotesque-v9-latin-700.woff2")
+      format("woff2");
+  }
+
+  :root {
+    /* Neutral colors (dark → light) */
+    --color-neutral-900: hsl(243, 96%, 9%);
+    --color-neutral-800: hsl(243, 27%, 20%);
+    --color-neutral-700: hsl(243, 23%, 24%);
+    --color-neutral-600: hsl(243, 23%, 30%);
+    --color-neutral-300: hsl(240, 6%, 70%);
+    --color-neutral-200: hsl(250, 6%, 84%);
+    --color-neutral-0: hsl(0, 0%, 100%);
+
+    /* Brand / Accent colors */
+    --color-accent-orange-500: hsl(28, 100%, 52%);
+    --color-primary-blue-500: hsl(233, 67%, 56%);
+    --color-primary-blue-700: hsl(248, 70%, 36%);
+
+    --color-main-bg: var(--color-neutral-900);
+    --color-text-light: var(--color-neutral-0);
+    --color-text-medium: var(--color-neutral-200);
+    --color-form-bg-dark: var(--color-neutral-800);
+    --color-form-bg-dark-hover: var(--color-neutral-700);
+    --color-form-bg-med: var(--color-neutral-700);
+    --color-form-bg-light: var(--color-neutral-600);
+    --color-form-border: var(--color-neutral-600);
+    --color-button: var(--color-primary-blue-500);
+    --color-button-hover: var(--color-primary-blue-700);
+
+    /* Font Size */
+    --fs-96: calc(96 / 16 * 1rem);
+    --fs-52: calc(52 / 16 * 1rem);
+    --fs-32: calc(32 / 16 * 1rem);
+    --fs-28: calc(28 / 16 * 1rem);
+    --fs-20: calc(20 / 16 * 1rem);
+    --fs-18: calc(18 / 16 * 1rem);
+    --fs-16: calc(16 / 16 * 1rem);
+    --fs-14: calc(14 / 16 * 1rem);
+
+    --font-size-h1: var(--fs-52);
+    --font-size-dropdown: var(--fs-14);
+    --font-size-search: var(--fs-20);
+    --font-size-city: var(--fs-28);
+    --font-size-date: var(--fs-18);
+    --font-size-temp: var(--fs-96);
+    --font-size-panel-title: var(--fs-18);
+    --font-size-panel-value: var(--fs-32);
+    --font-size-daily-forecast-title: var(--fs-20);
+    --font-size-daily-forecast-day: var(--fs-18);
+    --font-size-daily-forecast-temp: var(--fs-16);
+    --font-size-daily-forecast-dropdown: var(--fs-16);
+    --font-size-daily-forecast-hour: var(--fs-20);
+
+    @media (width >= calc(700 / 16 * 1rem)) {
+      --font-size-dropdown: var(--fs-16);
+    }
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  body {
+    font-family: "DM Sans", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Bricolage Grotesque", Arial, Helvetica, sans-serif;
+  }
+}
