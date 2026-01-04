@@ -5,7 +5,7 @@
     font-family: "DM Sans";
     font-style: normal;
     font-weight: 300;
-    src: url("/assets/fonts/dm-sans-v17-latin-300.woff2") format("woff2");
+    src: url("./assets/fonts/dm-sans-v17-latin-300.woff2") format("woff2");
   }
   /* dm-sans-500 - latin */
   @font-face {
@@ -13,7 +13,7 @@
     font-family: "DM Sans";
     font-style: normal;
     font-weight: 500;
-    src: url("/assets/fonts/dm-sans-v17-latin-500.woff2") format("woff2");
+    src: url("./assets/fonts/dm-sans-v17-latin-500.woff2") format("woff2");
   }
   /* dm-sans-600 - latin */
   @font-face {
@@ -21,7 +21,7 @@
     font-family: "DM Sans";
     font-style: normal;
     font-weight: 600;
-    src: url("/assets/fonts/dm-sans-v17-latin-600.woff2") format("woff2");
+    src: url("./assets/fonts/dm-sans-v17-latin-600.woff2") format("woff2");
   }
   /* dm-sans-600italic - latin */
   @font-face {
@@ -29,7 +29,7 @@
     font-family: "DM Sans";
     font-style: italic;
     font-weight: 600;
-    src: url("/assets/fonts/dm-sans-v17-latin-600italic.woff2") format("woff2");
+    src: url("./assets/fonts/dm-sans-v17-latin-600italic.woff2") format("woff2");
   }
   /* dm-sans-700 - latin */
   @font-face {
@@ -37,7 +37,7 @@
     font-family: "DM Sans";
     font-style: normal;
     font-weight: 700;
-    src: url("/assets/fonts/dm-sans-v17-latin-700.woff2") format("woff2");
+    src: url("./assets/fonts/dm-sans-v17-latin-700.woff2") format("woff2");
   }
 
   /* bricolage-grotesque-regular - latin */
@@ -46,18 +46,18 @@
     font-family: "Bricolage Grotesque";
     font-style: normal;
     font-weight: 400;
-    src: url("/assets/fonts/bricolage-grotesque-v9-latin-regular.woff2")
+    src: url("./assets/fonts/bricolage-grotesque-v9-latin-regular.woff2")
       format("woff2");
   }
   /* bricolage-grotesque-700 - latin */
-  @font-face {
+  /* @font-face {
     font-display: swap;
     font-family: "Bricolage Grotesque";
     font-style: normal;
     font-weight: 700;
-    src: url("/assets/fonts/bricolage-grotesque-v9-latin-700.woff2")
+    src: url("./assets/fonts/bricolage-grotesque-v9-latin-700.woff2")
       format("woff2");
-  }
+  } */
 
   :root {
     /* Neutral colors (dark → light) */
@@ -228,6 +228,18 @@
       }
     }
     .header__dropdown {
+      appearance: none;
+      cursor: pointer;
+      background-image: url("./assets/images/icon-units.svg");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      background-size: 18px;
+      padding: 8px 40px 8px 12px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      inline-size: auto;
     }
   }
   .hero {

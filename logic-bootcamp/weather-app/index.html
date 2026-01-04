@@ -36,11 +36,11 @@
             height="40"
             class="header__logo" />
         </a>
-        <select name="" id="" class="header__dropdown">
-          <option value="">
-            <img src="./assets/images/icon-units.svg" alt="" /> Units
-          </option>
-        </select>
+       <select class="header__dropdown" id="unitNumber">
+          <option value="">Units</option>
+          <option value="C">&deg;C</option>
+          <option value="F">&deg;F</option>
+      </select>
       </div>
     </header>
     <main id="main" class="main wrapper">
@@ -49,7 +49,7 @@
           <h1 class="hero__title">How's the sky looking today?</h1>
           <div class="hero_search">
             <input class="hero_textbox" type="text" name="search" id="search" />
-            <button class="hero_btn" type="submit">Search</button>
+            <button class="hero_btn" type="submit" id="searchBtn">Search</button>
           </div>
         </div>
       </section>
@@ -58,8 +58,8 @@
           <h2 class="visually-hidden">Current location temperature</h2>
           <div class="current-weather">
             <div class="current-location">
-              <div class="current-city">Karachi, Pakistan</div>
-              <div class="current-date">Monday, Dec 29, 2025</div>
+              <div class="current-city" id="countryCity">Karachi, Pakistan</div>
+              <div class="current-date" id="currentCityDate">Monday, Dec 29, 2025</div>
             </div>
             <div class="current-info">
               <img
@@ -69,7 +69,7 @@
                 height="320"
                 class="current__icon" />
             </div>
-            <div class="current-temp"><span>20</span>&deg;</div>
+            <div class="current-temp"><span id="temp">20</span>&deg;</div>
           </div>
           <div class="current-conditions">
             <div class="block current-condition">
@@ -93,8 +93,9 @@
 
         <section class="daily">
           <h2 class="daily__title section-title">Daily forecast</h2>
-          <div class="daily__forecast">
-            <div class="block daily__day">
+          <div class="daily__forecast" id="dailyForeCast">
+          
+            <!-- <div class="block daily__day">
               <p class="daily__day-title">Tue</p>
               <img
                 src="./assets/images/icon-rain.webp"
@@ -106,113 +107,41 @@
                 <p class="day-high-temp">20&deg;</p>
                 <p class="daily__day-low">14&deg;</p>
               </div>
-            </div>
+            </div> -->
 
-            <div class="block daily__day">
-              <p class="daily__day-title">Tue</p>
-              <img
-                src="./assets/images/icon-rain.webp"
-                alt=""
-                width="320"
-                height="320"
-                class="daily__day-icon" />
-              <div class="daily__day-temps">
-                <p class="day-high-temp">20&deg;</p>
-                <p class="daily__day-low">14&deg;</p>
-              </div>
-            </div>
-
-            <div class="block daily__day">
-              <p class="daily__day-title">Tue</p>
-              <img
-                src="./assets/images/icon-rain.webp"
-                alt=""
-                width="320"
-                height="320"
-                class="daily__day-icon" />
-              <div class="daily__day-temps">
-                <p class="day-high-temp">20&deg;</p>
-                <p class="daily__day-low">14&deg;</p>
-              </div>
-            </div>
-
-            <div class="block daily__day">
-              <p class="daily__day-title">Tue</p>
-              <img
-                src="./assets/images/icon-rain.webp"
-                alt=""
-                width="320"
-                height="320"
-                class="daily__day-icon" />
-              <div class="daily__day-temps">
-                <p class="day-high-temp">20&deg;</p>
-                <p class="daily__day-low">14&deg;</p>
-              </div>
-            </div>
-
-            <div class="block daily__day">
-              <p class="daily__day-title">Tue</p>
-              <img
-                src="./assets/images/icon-rain.webp"
-                alt=""
-                width="320"
-                height="320"
-                class="daily__day-icon" />
-              <div class="daily__day-temps">
-                <p class="day-high-temp">20&deg;</p>
-                <p class="daily__day-low">14&deg;</p>
-              </div>
-            </div>
-
-            <div class="block daily__day">
-              <p class="daily__day-title">Tue</p>
-              <img
-                src="./assets/images/icon-rain.webp"
-                alt=""
-                width="320"
-                height="320"
-                class="daily__day-icon" />
-              <div class="daily__day-temps">
-                <p class="day-high-temp">20&deg;</p>
-                <p class="daily__day-low">14&deg;</p>
-              </div>
-            </div>
-
-            <div class="block daily__day">
-              <p class="daily__day-title">Tue</p>
-              <img
-                src="./assets/images/icon-rain.webp"
-                alt=""
-                width="320"
-                height="320"
-                class="daily__day-icon" />
-              <div class="daily__day-temps">
-                <p class="day-high-temp">20&deg;</p>
-                <p class="daily__day-low">14&deg;</p>
-              </div>
-            </div>
+           
           </div>
         </section>
 
         <div class="hourly__content">
           <div class="hourly__header">
             <h2 class="section__title hourly__title">Hourly forecast</h2>
-            <select class="dropdown hourly__select" name="hourly__select" id="ddlDay"></select>
+            <select class="dropdown hourly__select" name="hourly__select" id="ddlDay">
+              <option value="sunday">Sunday</option>
+              <option value="monday">Monday</option>
+              <option value="tuesday">Tuesday</option>
+              <option value="wednesday">Wednesday</option>
+              <option value="thursday">Thursday</option>
+              <option value="friday">Friday</option>
+              <option value="saturday">Saturday</option>
+            </select>
           </div>
 
-          <div class="hourly__hours">
-            <div id="dvForecastHour1" class="hourly__hour"></div>
-            <div id="dvForecastHour2" class="hourly__hour"></div>
-            <div id="dvForecastHour3" class="hourly__hour"></div>
-            <div id="dvForecastHour4" class="hourly__hour"></div>
-            <div id="dvForecastHour5" class="hourly__hour"></div>
-            <div id="dvForecastHour6" class="hourly__hour"></div>
-            <div id="dvForecastHour7" class="hourly__hour"></div>
-            <div id="dvForecastHour8" class="hourly__hour"></div>
+          <div class="hourly__hours" id="hourly__hours">
+              <div id="dvForecastHour1" class="hourly__hour"></div>
+              <div id="dvForecastHour2" class="hourly__hour"></div>
+              <div id="dvForecastHour3" class="hourly__hour"></div>
+              <div id="dvForecastHour4" class="hourly__hour"></div>
+              <div id="dvForecastHour5" class="hourly__hour"></div>
+              <div id="dvForecastHour6" class="hourly__hour"></div>
+              <div id="dvForecastHour7" class="hourly__hour"></div>
+              <div id="dvForecastHour8" class="hourly__hour"></div>
           </div>
         </div>
       </section>
       </div>
     </main>
+    
+    <script src="./script.js" defer></script>
   </body>
 </html>
