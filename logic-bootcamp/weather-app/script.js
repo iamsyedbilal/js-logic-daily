@@ -13,6 +13,9 @@ const dailyForecast = document.querySelector("#dailyForeCast");
 const ddlDay = document.querySelector("#ddlDay");
 const hourlyHours = document.querySelector("#hourly__hours");
 
+let hourlyData = null;
+let apiStartDate = null;
+
 async function getWeatherData() {
   let search = inputValue.value;
 
@@ -69,11 +72,14 @@ async function getWeatherByCoords(lat, lon) {
 
   const response = await fetch(WEATHER_URI);
   const data = await response.json();
-  console.log(data);
+
   hourlyData = data.hourly;
   apiStartDate = data.daily.time[0];
   updateUI(data.current);
   dailyForecastHandler(data.daily);
+  showHourlyForecast(
+    new Date().toLocaleDateString("en-US", { weekday: "long" }).toLowerCase()
+  );
 }
 
 function updateUI(current) {
@@ -140,6 +146,53 @@ function weatherIcons(code) {
   return "icon-sunny.webp";
 }
 
+function showHourlyForecast(selectedDay) {
+  if (!hourlyData || !apiStartDate) return;
+
+  hourlyHours.innerHTML = "";
+
+  const startDate = new Date(apiStartDate);
+  const dayIndex = getDayIndex(selectedDay);
+
+  const selectedDate = new Date(startDate);
+  selectedDate.setDate(startDate.getDate() + dayIndex);
+
+  const selectedDateString = selectedDate.toISOString().split("T")[0];
+
+  for (let i = 0; i < hourlyData.time.length; i++) {
+    if (hourlyData.time[i].startsWith(selectedDateString)) {
+      const time = hourlyData.time[i].split("T")[1];
+      const temp = Math.round(hourlyData.temperature_2m[i]);
+      const icon = weatherIcons(hourlyData.weather_code[i]);
+
+      const hourHTML = `
+        <div class="hourly__hour">
+          <p>${time}</p>
+          <img src="./assets/images/${icon}" alt="" width="50" />
+          <p>${temp}&deg;</p>
+        </div>
+      `;
+
+      hourlyHours.insertAdjacentHTML("beforeend", hourHTML);
+    }
+  }
+}
+
+function getDayIndex(day) {
+  const days = [
+    "sunday",
+    "monday",
+    "tuesday",
+    "wednesday",
+    "thursday",
+    "friday",
+    "saturday",
+  ];
+  return days.indexOf(day);
+}
+
 searchBtn.addEventListener("click", getWeatherData);
 unitNumber.addEventListener("change", getWeatherData);
-ddlDay.addEventListener("change", getWeatherData);
+ddlDay.addEventListener("change", (e) => {
+  showHourlyForecast(e.target.value);
+});

@@ -7,6 +7,7 @@
     font-weight: 300;
     src: url("./assets/fonts/dm-sans-v17-latin-300.woff2") format("woff2");
   }
+
   /* dm-sans-500 - latin */
   @font-face {
     font-display: swap;
@@ -15,6 +16,7 @@
     font-weight: 500;
     src: url("./assets/fonts/dm-sans-v17-latin-500.woff2") format("woff2");
   }
+
   /* dm-sans-600 - latin */
   @font-face {
     font-display: swap;
@@ -23,6 +25,7 @@
     font-weight: 600;
     src: url("./assets/fonts/dm-sans-v17-latin-600.woff2") format("woff2");
   }
+
   /* dm-sans-600italic - latin */
   @font-face {
     font-display: swap;
@@ -31,6 +34,7 @@
     font-weight: 600;
     src: url("./assets/fonts/dm-sans-v17-latin-600italic.woff2") format("woff2");
   }
+
   /* dm-sans-700 - latin */
   @font-face {
     font-display: swap;
@@ -40,52 +44,29 @@
     src: url("./assets/fonts/dm-sans-v17-latin-700.woff2") format("woff2");
   }
 
-  /* bricolage-grotesque-regular - latin */
-  @font-face {
-    font-display: swap;
-    font-family: "Bricolage Grotesque";
-    font-style: normal;
-    font-weight: 400;
-    src: url("./assets/fonts/bricolage-grotesque-v9-latin-regular.woff2")
-      format("woff2");
-  }
-  /* bricolage-grotesque-700 - latin */
-  /* @font-face {
-    font-display: swap;
-    font-family: "Bricolage Grotesque";
-    font-style: normal;
-    font-weight: 700;
-    src: url("./assets/fonts/bricolage-grotesque-v9-latin-700.woff2")
-      format("woff2");
-  } */
-
   :root {
-    /* Neutral colors (dark → light) */
-    --color-neutral-900: hsl(243, 96%, 9%);
-    --color-neutral-800: hsl(243, 27%, 20%);
-    --color-neutral-700: hsl(243, 23%, 24%);
-    --color-neutral-600: hsl(243, 23%, 30%);
-    --color-neutral-300: hsl(240, 6%, 70%);
-    --color-neutral-200: hsl(250, 6%, 84%);
-    --color-neutral-0: hsl(0, 0%, 100%);
+    --c-neutral-900: hsl(243, 96%, 9%);
+    --c-neutral-800: hsl(243, 27%, 20%);
+    --c-neutral-700: hsl(243, 23%, 24%);
+    --c-neutral-600: hsl(243, 23%, 30%);
+    --c-neutral-300: hsl(240, 6%, 70%);
+    --c-neutral-200: hsl(250, 6%, 84%);
+    --c-neutral-0: hsl(0, 0%, 100%);
+    --c-orange-500: hsl(28, 100%, 52%);
+    --c-blue-500: hsl(233, 67%, 56%);
+    --c-blue-700: hsl(248, 70%, 36%);
 
-    /* Brand / Accent colors */
-    --color-accent-orange-500: hsl(28, 100%, 52%);
-    --color-primary-blue-500: hsl(233, 67%, 56%);
-    --color-primary-blue-700: hsl(248, 70%, 36%);
+    --color-main-bg: var(--c-neutral-900);
+    --color-text-light: var(--c-neutral-0);
+    --color-text-med-light: var(--c-neutral-200);
+    --color-panel-bg-dark: var(--c-neutral-800);
+    --color-panel-bg-dark-hover: var(--c-neutral-700);
+    --color-panel-bg-med: var(--c-neutral-700);
+    --color-panel-bg-light: var(--c-neutral-600);
+    --color-panel-border: var(--c-neutral-600);
+    --color-button-bg: var(--c-blue-500);
+    --color-button-bg-hover: var(--c-blue-700);
 
-    --color-main-bg: var(--color-neutral-900);
-    --color-text-light: var(--color-neutral-0);
-    --color-text-medium: var(--color-neutral-200);
-    --color-form-bg-dark: var(--color-neutral-800);
-    --color-form-bg-dark-hover: var(--color-neutral-700);
-    --color-form-bg-med: var(--color-neutral-700);
-    --color-form-bg-light: var(--color-neutral-600);
-    --color-form-border: var(--color-neutral-600);
-    --color-button: var(--color-primary-blue-500);
-    --color-button-hover: var(--color-primary-blue-700);
-
-    /* Font Size */
     --fs-96: calc(96 / 16 * 1rem);
     --fs-52: calc(52 / 16 * 1rem);
     --fs-32: calc(32 / 16 * 1rem);
@@ -103,11 +84,11 @@
     --font-size-temp: var(--fs-96);
     --font-size-panel-title: var(--fs-18);
     --font-size-panel-value: var(--fs-32);
-    --font-size-daily-forecast-title: var(--fs-20);
-    --font-size-daily-forecast-day: var(--fs-18);
-    --font-size-daily-forecast-temp: var(--fs-16);
-    --font-size-daily-forecast-dropdown: var(--fs-16);
-    --font-size-daily-forecast-hour: var(--fs-20);
+    --font-size-forecast-title: var(--fs-20);
+    --font-size-forecast-day: var(--fs-18);
+    --font-size-forecast-temp: var(--fs-16);
+    --font-size-forecast-dropdown: var(--fs-16);
+    --font-size-forecast-hour: var(--fs-20);
 
     @media (width >= calc(700 / 16 * 1rem)) {
       --font-size-dropdown: var(--fs-16);
@@ -133,11 +114,11 @@
     font-weight: 500;
     background-color: var(--color-main-bg);
     color: var(--color-text-light);
+    line-height: 1.2;
+    padding-block-end: 80px;
   }
 
-  h1,
-  h2,
-  h3 {
+  h1 {
     font-family: "Bricolage Grotesque", Arial, Helvetica, sans-serif;
   }
 
@@ -146,25 +127,8 @@
   textarea,
   select {
     font: inherit;
-    border: none;
     width: 100%;
-  }
-
-  .dashboard {
-    display: grid;
-    gap: 32px;
-    grid-template-areas:
-      "current"
-      "daily"
-      "hourly";
-
-    @media (width >= calc(1000 / 16 * 1rem)) {
-      gap: 48px 32px;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-areas:
-        "current current hourly"
-        "daily daily hourly";
-    }
+    border: none;
   }
 
   .wrapper {
@@ -189,23 +153,49 @@
     overflow: hidden;
 
     &.skip-link:focus {
-      background-color: var(--color-main-bg);
-      color: var(--color-text-light);
       left: 0;
       width: auto;
       height: auto;
+      background-color: var(--color-main-bg);
+      color: var(--color-text-light);
       padding: 10px;
       border: 2px solid var(--color-text-light);
     }
   }
+
   .main {
     display: grid;
     row-gap: 32px;
   }
 
+  .dashboard {
+    display: grid;
+    gap: 32px;
+    grid-template-areas:
+      "current"
+      "daily"
+      "hourly";
+
+    @media (width >= calc(1000 / 16 * 1rem)) {
+      gap: 48px 32px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "current current hourly"
+        "daily daily hourly";
+    }
+  }
+
+  .dropdown {
+    background-color: var(--color-panel-bg-dark);
+    color: var(--color-text-light);
+    border: 0;
+    font-size: var(--font-size-dropdown);
+    border-radius: 8px;
+  }
+
   .block {
-    background-color: var(--color-form-bg-dark);
-    border: 1px solid var(--color-form-border);
+    background-color: var(--color-panel-bg-dark);
+    border: 1px solid var(--color-panel-border);
     border-radius: 12px;
   }
 }
@@ -218,8 +208,7 @@
       justify-content: space-between;
       padding-block-start: 16px;
     }
-    .header__homelink {
-    }
+
     .header__logo {
       width: calc(137 / 16 * 1rem);
 
@@ -227,37 +216,35 @@
         width: calc(197 / 16 * 1rem);
       }
     }
+
     .header__dropdown {
-      appearance: none;
-      cursor: pointer;
+      max-width: 10ch;
       background-image: url("./assets/images/icon-units.svg");
       background-repeat: no-repeat;
-      background-position: right 12px center;
-      background-size: 18px;
-      padding: 8px 40px 8px 12px;
-      font-size: 16px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      background-color: #fff;
-      inline-size: auto;
+      background-position: 16px center;
+      padding: 12px 30px;
     }
   }
+
   .hero {
     .hero__content {
       display: grid;
       justify-items: center;
       padding-block-start: 48px;
     }
+
     .hero__title {
       font-size: var(--font-size-h1);
       margin-block-end: 48px;
       text-align: center;
       line-height: 1.2;
+
       @media (width < calc(1000 / 16 * 1rem)) {
         max-width: 15ch;
       }
     }
-    .hero_search {
+
+    .hero__search {
       display: grid;
       gap: 12px 16px;
       width: 100%;
@@ -267,22 +254,24 @@
         grid-template-columns: 1fr auto;
       }
     }
-    .hero_textbox {
+
+    .hero__textbox {
       background-image: url("./assets/images/icon-search.svg");
       background-repeat: no-repeat;
       background-position: 24px center;
-      background-color: var(--color-form-bg-dark);
+      background-color: var(--color-panel-bg-dark);
       font-size: var(--font-size-search);
       padding: 16px 20px 16px 60px;
-      color: var(--color-text-medium);
+      color: var(--color-text-med-light);
       border-radius: 12px;
 
       &:focus {
-        outline: 2px solid var(--color-text-medium);
+        outline: 2px solid var(--color-text-med-light);
       }
     }
-    .hero_btn {
-      background-color: var(--color-button);
+
+    .hero__button {
+      background-color: var(--c-blue-500);
       border-radius: 12px;
       font-size: var(--font-size-search);
       color: var(--color-text-light);
@@ -290,14 +279,16 @@
       transition: background-color 120ms ease-in-out;
 
       &:hover {
-        background-color: var(--color-button-hover);
+        background-color: var(--color-button-bg-hover);
         cursor: pointer;
       }
     }
   }
+
   .current {
     grid-area: current;
-    .current-weather {
+
+    .current__weather {
       display: flex;
       flex-direction: column;
       gap: 16px;
@@ -305,7 +296,7 @@
       padding: 40px 24px;
       background-image: url("./assets/images/bg-today-small.svg");
       background-repeat: no-repeat;
-      background-color: var(--color-button-hover);
+      background-color: var(--c-blue-700);
       background-size: cover;
       background-position: center bottom;
       border-radius: 20px;
@@ -319,35 +310,42 @@
         padding-block: 83px;
       }
     }
-    .current-location {
+
+    .current__location {
       text-align: center;
     }
-    .current-city {
+
+    .current__city {
       font-size: var(--font-size-city);
       font-weight: 700;
       margin-block-end: 12px;
     }
-    .current-date {
+
+    .current__date {
       font-size: var(--font-size-date);
-      color: var(--color-text-medium);
+      color: var(--color-text-med-light);
     }
-    .current-info {
+
+    .current__info {
       display: flex;
       align-items: center;
       gap: 20px;
     }
+
     .current__icon {
       width: 120px;
       height: auto;
     }
-    .current-temp {
+
+    .current__temp {
       font-size: var(--font-size-temp);
       line-height: 1;
       letter-spacing: -2%;
       font-weight: 600;
       font-style: italic;
     }
-    .current-conditions {
+
+    .current__conditions {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 16px;
@@ -356,15 +354,18 @@
         grid-template-columns: repeat(4, 1fr);
       }
     }
-    .current-condition {
+
+    .current__condition {
       padding: 20px;
     }
-    .current-condition-title {
+
+    .current__condition-title {
       font-size: var(--font-size-panel-title);
-      color: var(--color-text-medium);
+      color: var(--color-text-med-light);
       margin-block-end: 24px;
     }
-    .current-condition-value {
+
+    .current__condition-value {
       font-size: var(--font-size-panel-value);
       font-weight: 300;
     }
@@ -372,10 +373,12 @@
 
   .daily {
     grid-area: daily;
+
     .daily__title {
       font-size: var(--font-size-forecast-title);
       margin-block-end: 20px;
     }
+
     .daily__forecast {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -386,6 +389,7 @@
         grid-template-columns: repeat(7, 1fr);
       }
     }
+
     .daily__day {
       display: grid;
       justify-items: center;
@@ -393,34 +397,39 @@
       padding: 16px 10px;
       text-align: center;
     }
+
     .daily__day-title {
-      font-size: var(--font-size-daily-forecast-day);
+      font-size: var(--font-size-forecast-day);
     }
+
     .daily__day-icon {
       width: 60px;
       height: auto;
     }
+
     .daily__day-temps {
       justify-self: stretch;
       display: flex;
       justify-content: space-between;
-      font-size: var(--font-size-daily-forecast-temp);
+      font-size: var(--font-size-forecast-temp);
     }
 
     .daily__day-low {
-      color: var(--color-text-medium);
+      color: var(--color-text-med-light);
     }
   }
 
   .hourly {
     grid-area: hourly;
     position: relative;
+
     .hourly__content {
       background-color: var(--color-panel-bg-dark);
       border-radius: 20px;
       padding: 20px 16px;
       max-height: 60vh;
       overflow-y: scroll;
+      scrollbar-width: none;
 
       @media (width >= calc(1000 / 16 * 1rem)) {
         position: absolute;
@@ -428,6 +437,7 @@
         max-height: none;
       }
     }
+
     .hourly__header {
       display: flex;
       gap: 40px;
@@ -435,19 +445,23 @@
       align-items: center;
       margin-block-end: 16px;
     }
+
     .hourly__title {
       font-size: var(--font-size-forecast-title);
       font-weight: 600;
     }
+
     .hourly__select {
       background-color: var(--color-panel-bg-med);
       width: auto;
       padding: 8px 16px;
     }
+
     .hourly__hours {
       display: grid;
       gap: 16px;
     }
+
     .hourly__hour {
       display: grid;
       grid-template-columns: auto auto 1fr;
@@ -459,6 +473,7 @@
       border-radius: 8px;
       min-height: calc(60 / 16 * 1rem);
     }
+
     .hourly__hour-icon {
       width: 40px;
       height: auto;
